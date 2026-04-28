@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  --color-coastal-white: #FFFFFF;
+  --color-coastal-blue: #A8DADC;
+  --color-coastal-navy: #457B9D;
+  --color-coastal-sand: #F1FAEE;
+  --color-coastal-wood: #E9C46A;
+}
+
+@layer base {
+  body {
+    @apply bg-coastal-white text-coastal-navy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-coastal-blue/20;
+}
+
+.coastal-button {
+  @apply px-6 py-3 bg-coastal-navy text-white rounded-full font-medium transition-all hover:bg-coastal-blue hover:text-coastal-navy active:scale-95 disabled:opacity-50;
+}
+
+.coastal-button-outline {
+  @apply px-6 py-3 border-2 border-coastal-navy text-coastal-navy rounded-full font-medium transition-all hover:bg-coastal-navy hover:text-white active:scale-95;
+}
