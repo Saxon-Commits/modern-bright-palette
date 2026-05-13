@@ -14,33 +14,36 @@ export default function Footer() {
                 The Picnic Project
               </span>
             </Link>
-            <p className="text-coastal-navy/60 max-w-sm font-light leading-relaxed">
-              Elevated outdoor dining and luxury picnic experiences in Newcastle and the Hunter Region. 
-              Proudly supporting inclusive employment for people with disability.
+            <p className="text-coastal-charcoal max-w-sm font-medium leading-relaxed mb-6">
+              Elevated outdoor dining and luxury picnic experiences. Proudly supporting inclusive employment for people with disability.
             </p>
+            <div className="text-coastal-charcoal text-sm font-medium space-y-1">
+              <p><strong className="font-medium text-coastal-navy">The Picnic Project Newcastle</strong></p>
+              <p>Servicing Newcastle City, Merewether, Bar Beach & Hunter Valley</p>
+              <p>Newcastle, NSW 2300, Australia</p>
+              <p>Ph: <a href="tel:1300000000" className="hover:text-coastal-blue transition-colors">1300 000 000</a></p>
+            </div>
           </div>
           
           <div>
             <h4 className="font-bold text-coastal-navy mb-6 uppercase text-xs tracking-widest">Connect</h4>
-            <ul className="space-y-4 text-coastal-navy/70">
-              <li><a href="#" className="hover:text-coastal-blue transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-coastal-blue transition-colors">Facebook</a></li>
+            <ul className="space-y-4 text-coastal-charcoal font-medium">
+              <li><a href="https://www.instagram.com/thepicnicproject.newcastle/" target="_blank" rel="noopener noreferrer" className="hover:text-coastal-blue transition-colors">Instagram</a></li>
               <li><a href="mailto:hello@thepicnicproject.au" className="hover:text-coastal-blue transition-colors">Email Us</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-coastal-navy mb-6 uppercase text-xs tracking-widest">Legal</h4>
-            <ul className="space-y-4 text-coastal-navy/70">
+            <ul className="space-y-4 text-coastal-charcoal font-medium">
               <li><Link to="/tcs" className="hover:text-coastal-blue transition-colors">Terms & Conditions</Link></li>
               <li><a href="#" className="hover:text-coastal-blue transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-coastal-navy/40 font-medium uppercase tracking-widest">
+        <div className="pt-8 border-t border-gray-100 flex justify-center items-center text-xs text-coastal-navy/40 font-medium uppercase tracking-widest">
           <p>© 2024 The Picnic Project Newcastle. All Rights Reserved.</p>
-          <p>Managed with Love by Social Impact Team.</p>
         </div>
       </div>
     </footer>

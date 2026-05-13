@@ -3,7 +3,7 @@ import { Users, Heart, Sparkles } from 'lucide-react';
 
 export default function SocialImpact() {
   const stats = [
-    { icon: Users, label: 'Inclusive Employment', value: '100%', detail: 'Staff identified with disability' },
+    { icon: Users, label: 'Inclusive Employment', value: '100%', detail: 'Championing diverse abilities' },
     { icon: Heart, label: 'Community Support', value: 'Local', detail: 'Hunter Region focus' },
     { icon: Sparkles, label: 'Bespoke Experience', value: 'Premium', detail: 'Curated with care' },
   ];
@@ -18,28 +18,30 @@ export default function SocialImpact() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl text-coastal-navy mb-8">
-              Purity with a <span className="italic block mt-2 text-coastal-navy/80">Purpose.</span>
+              About Us
             </h2>
-            <div className="space-y-6 text-lg text-coastal-navy/80 font-light leading-relaxed">
+            <div className="space-y-6 text-lg text-coastal-charcoal font-medium leading-relaxed">
               <p>
-                The Picnic Project isn't just about beautiful setups; it's about creating
-                meaningful opportunities. We are a social enterprise dedicated to providing
-                employment and training for people with disabilities in our coastal community.
+                We’re a boutique luxury picnic business based in the Newcastle region, creating elevated picnic experiences for you and your loved ones. Think effortlessly elegant setups designed for comfort, connection, and slowing things down.
               </p>
               <p>
-                Every booking directly supports our mission to foster inclusivity, build
-                confidence, and showcase the incredible talents of our diverse team.
-                When you celebrate with us, you're helping us build a more inclusive Newcastle.
+                Perfect for birthdays, hens, baby showers, gender reveals or simply getting together just “because”. Our picnics are all about sharing moments, laughing lots, and creating beautiful memories together.
+              </p>
+              <p>
+                The Picnic Project is proudly run by a small team of two - Tay, the founder, and Ella, our beautiful first employee. When you book with us, you’re not only supporting a small local business, you’re also supporting inclusive employment. 
+              </p>
+              <p>
+                As The Picnic Project grows, we hope to continue expanding our team and creating more meaningful employment opportunities for people with disability across the Newcastle region.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
               {stats.map((stat, i) => (
-                <div key={i} className="flex flex-col">
-                  <stat.icon className="text-coastal-blue mb-4" size={32} />
-                  <span className="text-3xl font-bold text-coastal-navy">{stat.value}</span>
-                  <span className="text-xs uppercase tracking-widest font-bold text-coastal-navy/60 mt-1">{stat.label}</span>
-                  <span className="text-sm text-coastal-navy/40 mt-1">{stat.detail}</span>
+                <div key={i} className="flex flex-col bg-white shadow-md p-6 rounded-3xl border border-coastal-blue/10 hover:-translate-y-1 transition-transform">
+                  <stat.icon className="text-coastal-navy mb-4" size={32} />
+                  <span className="text-2xl font-bold text-coastal-navy">{stat.value}</span>
+                  <span className="text-xs uppercase tracking-widest font-bold text-coastal-charcoal mt-1">{stat.label}</span>
+                  <span className="text-xs text-coastal-charcoal/70 mt-2 font-medium">{stat.detail}</span>
                 </div>
               ))}
             </div>
@@ -51,11 +53,12 @@ export default function SocialImpact() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white relative z-10">
               <img
-                src="/images/social-toast.jpg"
-                alt="Social gathering picnic setup"
+                src="/images/about-us-new.jpg"
+                alt="Friends celebrating with a luxury picnic setup in Newcastle, NSW"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             {/* Design accents */}
@@ -63,6 +66,11 @@ export default function SocialImpact() {
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-coastal-wood/20 rounded-full -z-0"></div>
           </motion.div>
         </div>
+      </div>
+      <div className="mt-20 text-center relative z-10 px-4">
+        <p className="font-handwriting text-3xl md:text-4xl text-coastal-blue transform -rotate-2 inline-block">
+          With love, Ella & Tay
+        </p>
       </div>
     </section>
   );

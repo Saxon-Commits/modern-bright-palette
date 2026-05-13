@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Calendar, Users, Clock, MapPin, Send } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '@/src/components/SEO';
+import { breadcrumbSchema } from '@/src/lib/seoData';
 
 export default function Booking() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,6 +16,11 @@ export default function Booking() {
   if (submitted) {
     return (
       <div className="pt-32 pb-24 px-6 min-h-screen flex items-center justify-center bg-coastal-sand text-center">
+        <SEO 
+          title="Booking Sent | The Picnic Project"
+          description="Thank you for booking your luxury picnic in Newcastle. We will be in touch shortly."
+          canonical="/book"
+        />
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -39,6 +46,12 @@ export default function Booking() {
 
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-white">
+      <SEO 
+        title="Book Your Luxury Picnic in Newcastle NSW | The Picnic Project"
+        description="Book a bespoke luxury picnic setup for your next birthday, hens party, or proposal in Newcastle, NSW. Fill out the form to check availability."
+        canonical="/book"
+        schema={breadcrumbSchema}
+      />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>

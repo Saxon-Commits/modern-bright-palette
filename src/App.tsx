@@ -11,6 +11,8 @@ import Home from './pages/Home';
 import Booking from './pages/Booking';
 import TC from './pages/TC';
 import { AnimatePresence } from 'motion/react';
+import { StyleProvider } from './context/StyleContext';
+import { HelmetProvider } from 'react-helmet-async';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -31,9 +33,11 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
+    <HelmetProvider>
+      <StyleProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
           <AnimatePresence mode="wait">
@@ -46,6 +50,8 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+      </Router>
+    </StyleProvider>
+    </HelmetProvider>
   );
 }

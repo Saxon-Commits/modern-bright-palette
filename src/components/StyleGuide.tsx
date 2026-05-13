@@ -1,37 +1,53 @@
 import { motion } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useStyleColor } from '../context/StyleContext';
 
 const styles = [
   {
-    title: 'Nautical Blue',
-    image: '/images/event-sign.jpg',
-    description: 'Crisp white linens paired with deep sea-foam accents and natural wood.'
+    title: 'The "Blue"',
+    image: '/images/style-pic-2.jpg',
+    description: 'Think bold blue florals with gorgeous statement glassware.',
+    color: '#6094d0'
   },
   {
-    title: 'Earthly Sand',
-    image: '/images/pouring-drink.jpg',
-    description: 'Warm, organic tones with jute textures and dried floral highlights.'
+    title: 'The "Neutral"',
+    image: '/images/style-pic-1.jpg',
+    description: 'Timeless, underrated, elegant.',
+    color: '#d4a373'
   },
   {
-    title: 'Golden Sunset',
-    image: '/images/kids-party.jpg',
-    description: 'Vibrant and warm, perfect for evening celebrations as the sun dips.'
+    title: 'The "Red & Pink"',
+    image: '/images/style-pic-3.jpg',
+    description: 'Our favourite! Playful, vibrant and a little fun.',
+    color: '#D83D50'
   },
 ];
 
 export default function StyleGuide() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(2);
+  const { setActiveColor } = useStyleColor();
+
+  useEffect(() => {
+    setActiveColor(styles[index].color);
+  }, [index, setActiveColor]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % styles.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const next = () => setIndex((prev) => (prev + 1) % styles.length);
   const prev = () => setIndex((prev) => (prev - 1 + styles.length) % styles.length);
 
   return (
-    <section id="style-guide" className="py-24 bg-coastal-navy text-white overflow-hidden">
+    <section id="style-guide" className="py-24 text-white overflow-hidden transition-colors duration-700" style={{ backgroundColor: styles[index].color }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16">
           <div>
-            <span className="uppercase tracking-widest text-sm font-bold text-coastal-blue/60 mb-4 block">Style Guide</span>
+            <span className="uppercase tracking-widest text-sm font-bold text-white/60 mb-4 block">Style Guide</span>
             <h2 className="text-4xl md:text-7xl leading-none">Choose Your <br /><span className="italic">Aesthetic.</span></h2>
           </div>
           <p className="text-white/60 max-w-sm mt-8 md:mt-0 font-light">
@@ -49,8 +65,9 @@ export default function StyleGuide() {
             >
               <img
                 src={styles[index].image}
-                alt={styles[index].title}
+                alt={`Luxury picnic setup for ${styles[index].title} aesthetic in Newcastle`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12 lg:hidden">
                 <div>
@@ -67,7 +84,7 @@ export default function StyleGuide() {
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-6"
               >
-                <h3 className="text-5xl font-display italic text-coastal-blue">{styles[index].title}</h3>
+                <h3 className="text-5xl font-display italic text-white">{styles[index].title}</h3>
                 <p className="text-xl text-white/80 font-light leading-relaxed">
                   {styles[index].description}
                 </p>
@@ -89,7 +106,10 @@ export default function StyleGuide() {
             <button onClick={prev} className="p-2 text-white/60 active:text-white"><ChevronLeft size={32} /></button>
             <div className="flex gap-2">
               {styles.map((_, i) => (
-                <div key={i} className={`w-2 h-2 rounded-full transition-all ${i === index ? 'bg-coastal-blue w-6' : 'bg-white/30'}`}></div>
+                <div 
+                  key={i} 
+                  className={`h-2 rounded-full transition-all ${i === index ? 'w-6 bg-white' : 'w-2 bg-white/30'}`}
+                ></div>
               ))}
             </div>
             <button onClick={next} className="p-2 text-white/60 active:text-white"><ChevronRight size={32} /></button>

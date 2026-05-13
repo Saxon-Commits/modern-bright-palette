@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-handwriting: "Caveat", cursive;
   
   --color-coastal-white: #FFFFFF;
-  --color-coastal-blue: #A8DADC;
-  --color-coastal-navy: #457B9D;
-  --color-coastal-sand: #F1FAEE;
-  --color-coastal-wood: #E9C46A;
+  --color-coastal-blue: #e2b4b4;
+  --color-coastal-navy: #D83D50;
+  --color-coastal-charcoal: #3D2B2B;
+  --color-coastal-sand: #FDF6F6;
+  --color-coastal-wood: #e2b4b4;
 }
 
 @layer base {
@@ -23,7 +26,7 @@
 }
 
 .glass-nav {
-  @apply bg-white/80 backdrop-blur-md border-b border-coastal-blue/20;
+  @apply bg-white/80 backdrop-blur-md;
 }
 
 .coastal-button {

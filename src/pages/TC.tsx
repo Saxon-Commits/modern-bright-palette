@@ -1,8 +1,14 @@
 import { motion } from 'motion/react';
+import SEO from '@/src/components/SEO';
 
 export default function TC() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-coastal-sand">
+      <SEO 
+        title="Terms & Conditions | The Picnic Project Newcastle"
+        description="Read the terms and conditions for booking a luxury picnic with The Picnic Project in Newcastle, NSW. Information on cancellations, weather, and payments."
+        canonical="/tcs"
+      />
       <div className="max-w-4xl mx-auto bg-white rounded-[2rem] p-8 md:p-16 shadow-sm border border-gray-100">
         <motion.div
            initial={{ opacity: 0, y: 20 }}

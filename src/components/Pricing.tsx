@@ -30,7 +30,9 @@ const extras = [
   { name: 'Personalised Sign', price: '$50' },
   { name: 'Gold Ice Bucket', price: '$10' },
   { name: 'Ice for bucket', price: '$5' },
-  { name: 'Fresh Seasonal Blooms', price: 'Enquire' },
+  { name: 'Fresh Florals (Bloom With Us)', price: '$550' },
+  { name: 'Content Creator (REELRED_)', price: '$150' },
+  { name: 'Selah Co Photography', price: 'From $180' },
 ];
 
 export default function Pricing() {
@@ -39,25 +41,33 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 underline-offset-8">
           <h2 className="text-4xl md:text-6xl text-coastal-navy mb-4 italic">Pricing & Inclusions</h2>
-          <p className="text-coastal-navy/60 max-w-xl mx-auto">Everything you need for the most perfect luxury picnic experience.</p>
+          <p className="font-handwriting text-3xl text-coastal-blue/80 max-w-xl mx-auto transform -rotate-1">Everything you need for the perfect experience</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Pricing */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-coastal-sand rounded-3xl p-8 md:p-12 shadow-sm border border-coastal-blue/10">
-              <h3 className="text-2xl font-bold mb-8 text-coastal-navy">Luxury Picnic Packages</h3>
+              <h3 className="text-2xl font-bold mb-4 text-coastal-navy">Luxury Picnic Packages</h3>
+              <p className="text-coastal-charcoal mb-8 font-medium">
+                Whether you're planning a <strong className="font-bold text-coastal-navy">hens party</strong>, <strong className="font-bold text-coastal-navy">18th birthday</strong>, <strong className="font-bold text-coastal-navy">baby shower</strong>, or an intimate <strong className="font-bold text-coastal-navy">anniversary picnic</strong> in Newcastle, our packages are designed to scale effortlessly to your group size.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {pricingData.map((item, i) => (
-                  <div key={i} className="flex items-center justify-between p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-coastal-blue transition-colors">
-                    <span className="font-medium text-lg">{item.group}</span>
+                  <div key={i} className="flex items-center justify-between p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-coastal-navy border-l-4 border-l-coastal-navy transition-colors">
+                    <span className="font-medium text-lg text-coastal-charcoal">{item.group}</span>
                     <span className="text-2xl font-bold text-coastal-navy">{item.price}</span>
                   </div>
                 ))}
-                <div className="md:col-span-2 flex items-center justify-between p-6 bg-coastal-navy text-white rounded-2xl shadow-md cursor-pointer hover:bg-coastal-blue hover:text-coastal-navy transition-all">
+                <a 
+                  href="https://form.jotform.com/260421379292054?fbclid=PAVERFWAQ35-hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLcaOhSDvO_hu47amDfIi2_ly7hRzFeYx91n3gaQMAhERb5minO-Ja15XARw_aem_dIzyDJkY6rzVQe4JUF4ANw" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="md:col-span-2 flex items-center justify-between p-6 bg-coastal-navy text-white rounded-2xl shadow-md cursor-pointer hover:bg-coastal-blue hover:text-coastal-navy transition-all"
+                >
                   <span className="font-bold text-lg">17-20 people</span>
                   <span className="uppercase tracking-widest text-sm font-bold">Enquire Direct</span>
-                </div>
+                </a>
               </div>
 
               <div className="mt-12">
@@ -68,10 +78,10 @@ export default function Pricing() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                   {inclusions.map((text, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="mt-1 w-5 h-5 rounded-full bg-coastal-blue/20 flex items-center justify-center flex-shrink-0">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-coastal-navy/10 flex items-center justify-center flex-shrink-0">
                         <Check size={12} className="text-coastal-navy" />
                       </div>
-                      <span className="text-coastal-navy/70 text-sm">{text}</span>
+                      <span className="text-coastal-charcoal font-medium text-sm">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -81,9 +91,9 @@ export default function Pricing() {
 
           {/* Extras */}
           <div className="space-y-8">
-            <div className="bg-coastal-white border-2 border-coastal-blue/30 rounded-3xl p-8 h-full">
+            <div className="bg-white shadow-md border border-coastal-blue/10 rounded-3xl p-8 h-full">
               <h3 className="text-2xl font-bold mb-8 text-coastal-navy">Enhance Your Picnic</h3>
-              <p className="text-sm text-coastal-navy/60 mb-8 italic">Want to take your picnic to the next level? We offer a selection of optional add-ons.</p>
+              <p className="text-sm text-coastal-charcoal font-medium mb-8 italic">Want to take your picnic to the next level? We offer a selection of optional add-ons.</p>
               
               <div className="space-y-4">
                 {extras.map((extra, i) => (
@@ -95,9 +105,52 @@ export default function Pricing() {
               </div>
 
               <div className="mt-12 p-6 bg-coastal-sand rounded-2xl">
-                <h4 className="font-bold text-coastal-navy mb-2">Social Events</h4>
-                <p className="text-sm text-coastal-navy/60">We also specialize in Proposals ($450) and Group events starting from $45pp. Contact us for a custom quote.</p>
+                <h4 className="font-bold text-coastal-navy mb-2">The Engagement Package</h4>
+                <p className="text-sm text-coastal-charcoal font-medium leading-relaxed mb-4">
+                  <strong className="font-bold text-coastal-navy">$200</strong> — This experience includes a fully styled luxury picnic setup featuring our signature artificial roses, creating a stunning and intimate atmosphere for your special occasion. 
+                </p>
+                <p className="text-sm text-coastal-charcoal font-medium leading-relaxed">
+                  <span className="italic">Looking for a larger group event? We also cater to corporate gatherings and large social events starting from $45pp. Contact us for a custom quote.</span>
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Creative Partners */}
+        <div className="mt-16">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl text-coastal-navy italic">Trusted Partnerships & Creative Add-ons</h3>
+            <p className="text-coastal-charcoal mt-2 font-medium">Elevate your picnic with our hand-picked local creatives. Available to add to any package.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all border border-coastal-blue/10">
+              <h4 className="text-xl font-bold text-coastal-navy mb-2">Bloom With Us Florals</h4>
+              <p className="text-sm text-coastal-charcoal leading-relaxed mb-6 font-medium">
+                Add a full fresh floral setup to any package for <strong className="font-bold text-coastal-navy">$550</strong>. If you're after something larger or more customized, you can reach out directly for a tailored quote. You can also order fresh blooms through them outside of engagements!
+              </p>
+              <a href="https://www.bloomwithus.com.au/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-coastal-navy hover:text-coastal-navy/80 transition-colors">Visit Bloom With Us &rarr;</a>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all border border-coastal-blue/10 flex flex-col">
+              <h4 className="text-xl font-bold text-coastal-navy mb-2">REELRED_</h4>
+              <p className="text-sm text-coastal-charcoal leading-relaxed mb-6 font-medium flex-grow">
+                Work with Ruby, a content creator with over five years of industry experience. For <strong className="font-bold text-coastal-navy">$150</strong>, she will capture an hour of content from your special day and turn those moments into a beautiful, organic reel for you to keep.
+              </p>
+              <a href="https://www.instagram.com/reelred_/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-coastal-navy hover:text-coastal-navy/80 transition-colors mt-auto">View Instagram &rarr;</a>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all border border-coastal-blue/10 flex flex-col">
+              <h4 className="text-xl font-bold text-coastal-navy mb-2">Selah Co Photography</h4>
+              <p className="text-sm text-coastal-charcoal leading-relaxed mb-4 font-medium">
+                Beautiful lifestyle photography by Selah Co. Two simple, accessible add-on options:
+              </p>
+              <ul className="text-sm text-coastal-charcoal space-y-2 mb-6 font-medium flex-grow">
+                <li>• <strong className="font-bold text-coastal-navy">Moments ($180)</strong>: 30-60 mins, 20-30 edited images.</li>
+                <li>• <strong className="font-bold text-coastal-navy">Story ($260)</strong>: 2 hours, 40-60 images, candid style.</li>
+              </ul>
+              <a href="https://beacons.ai/selahcocreative" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-coastal-navy hover:text-coastal-navy/80 transition-colors mt-auto">View Portfolio &rarr;</a>
             </div>
           </div>
         </div>
