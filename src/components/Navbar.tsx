@@ -11,11 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // The Hero section takes up 100vh (window.innerHeight). 
-      // The navbar is roughly 80px tall. 
-      // So the bottom of the navbar touches the next section when scrollY is window.innerHeight - 80.
-      // You can easily tweak the "80" here to fine-tune exactly when it triggers!
-      const threshold = window.innerHeight - 800;
+      const threshold = 50;
       setScrolled(window.scrollY > threshold);
     };
     window.addEventListener('scroll', handleScroll);

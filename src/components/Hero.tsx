@@ -14,13 +14,13 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-coastal-sand/60"></div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl">
+      <div className="relative z-10 text-center px-6 max-w-4xl pt-16 md:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="font-sans text-sm md:text-base tracking-[0.25em] uppercase text-coastal-blue font-medium mb-6">
+          <div className="hidden md:block font-sans text-sm md:text-base tracking-[0.25em] uppercase text-coastal-blue font-medium mb-6">
             NEWCASTLE, NSW
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1] md:leading-[1.1] [text-shadow:0_2px_10px_rgba(0,0,0,0.4)]">

@@ -55,7 +55,7 @@ export default function SocialImpact() {
           >
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white relative z-10">
               <img
-                src="/images/about-us-new.jpg"
+                src="/images/ella-tay.jpg"
                 alt="Friends celebrating with a luxury picnic setup in Newcastle, NSW"
                 className="w-full h-full object-cover"
                 loading="lazy"
