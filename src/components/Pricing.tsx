@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Check, Info } from 'lucide-react';
+import { Check, Info, Flower2, Star } from 'lucide-react';
 
 const pricingData = [
   { group: 'Up to 4 people', price: '$250' },
@@ -19,6 +19,9 @@ const inclusions = [
   'Stunning gold cutlery',
   'Linen napkins',
   'Styled table pieces & florals',
+  'White letterboard with customisable personal message',
+  'Personalised sign with easel (larger setups)',
+  'Fresh seasonal florals (enquire within — we can work within your budget)',
   '2.5-hour picnic experience',
   'Delivery, setup & pack-down (within 20km)',
   'Introduction & walkthrough by Ella',
@@ -27,12 +30,8 @@ const inclusions = [
 
 const extras = [
   { name: 'Fluffy Chair', price: '$25' },
-  { name: 'Personalised Sign', price: '$50' },
   { name: 'Gold Ice Bucket', price: '$10' },
   { name: 'Ice for bucket', price: '$5' },
-  { name: 'Fresh Florals (Bloom With Us)', price: '$550' },
-  { name: 'Content Creator (REELRED_)', price: '$150' },
-  { name: 'Selah Co Photography', price: 'From $180' },
 ];
 
 export default function Pricing() {
@@ -50,7 +49,7 @@ export default function Pricing() {
             <div className="bg-coastal-sand rounded-3xl p-8 md:p-12 shadow-sm border border-coastal-blue/10">
               <h3 className="text-2xl font-bold mb-4 text-coastal-navy">Luxury Picnic Packages</h3>
               <p className="text-coastal-charcoal mb-8 font-medium">
-                Whether you're planning a <strong className="font-bold text-coastal-navy">hens party</strong>, <strong className="font-bold text-coastal-navy">18th birthday</strong>, <strong className="font-bold text-coastal-navy">baby shower</strong>, or an intimate <strong className="font-bold text-coastal-navy">anniversary picnic</strong> in Newcastle, our packages are designed to scale effortlessly to your group size.
+                Whether you're planning a <strong className="font-bold text-coastal-navy">hens party</strong>, <strong className="font-bold text-coastal-navy">18th birthday</strong>, <strong className="font-bold text-coastal-navy">baby shower</strong>, or an intimate <strong className="font-bold text-coastal-navy">anniversary picnic</strong> in Newcastle — or just because — we've got you covered.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {pricingData.map((item, i) => (
@@ -71,10 +70,11 @@ export default function Pricing() {
               </div>
 
               <div className="mt-12">
-                <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
-                  <Info className="text-coastal-blue" size={20} />
+                <h4 className="text-xl font-bold mb-2 flex items-center gap-2 text-coastal-navy">
+                  <Check className="text-coastal-navy" size={20} />
                   Included in every setup
                 </h4>
+                <p className="text-sm text-coastal-charcoal/80 font-medium mb-6 italic">Everything you need for your luxury picnic</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                   {inclusions.map((text, i) => (
                     <div key={i} className="flex items-start gap-3">
@@ -91,11 +91,12 @@ export default function Pricing() {
 
           {/* Extras */}
           <div className="space-y-8">
-            <div className="bg-white shadow-md border border-coastal-blue/10 rounded-3xl p-8 h-full">
+            <div className="bg-white shadow-md border border-coastal-blue/10 rounded-3xl p-8">
               <h3 className="text-2xl font-bold mb-8 text-coastal-navy">Enhance Your Picnic</h3>
               <p className="text-sm text-coastal-charcoal font-medium mb-8 italic">Want to take your picnic to the next level? We offer a selection of optional add-ons.</p>
               
-              <div className="space-y-4">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-coastal-charcoal mb-4">Optional Extras</h4>
+              <div className="space-y-4 mb-10">
                 {extras.map((extra, i) => (
                   <div key={i} className="flex items-center justify-between py-4 border-b border-gray-100 last:border-0">
                     <span className="font-medium text-coastal-navy">{extra.name}</span>
@@ -104,14 +105,32 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <div className="mt-12 p-6 bg-coastal-sand rounded-2xl">
-                <h4 className="font-bold text-coastal-navy mb-2">The Engagement Package</h4>
-                <p className="text-sm text-coastal-charcoal font-medium leading-relaxed mb-4">
-                  <strong className="font-bold text-coastal-navy">$200</strong> — This experience includes a fully styled luxury picnic setup featuring our signature artificial roses, creating a stunning and intimate atmosphere for your special occasion. 
-                </p>
-                <p className="text-sm text-coastal-charcoal font-medium leading-relaxed">
-                  <span className="italic">Looking for a larger group event? We also cater to corporate gatherings and large social events starting from $45pp. Contact us for a custom quote.</span>
-                </p>
+              {/* Engagement Package — standalone */}
+              <div className="mt-4 p-6 bg-gradient-to-br from-coastal-sand to-coastal-blue/10 rounded-2xl border-2 border-coastal-navy/20 shadow-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <Star className="text-coastal-navy" size={18} />
+                  <h4 className="font-bold text-coastal-navy text-lg">The Engagement Package</h4>
+                </div>
+                <div className="flex gap-4 mb-4">
+                  <img
+                    src="/images/style-pic-3.jpg"
+                    alt="Engagement picnic setup with signature roses"
+                    className="w-24 h-24 object-cover rounded-xl flex-shrink-0 shadow-sm"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="text-2xl font-bold text-coastal-navy mb-1">$200</p>
+                    <p className="text-sm text-coastal-charcoal font-medium leading-relaxed">
+                      A fully styled luxury picnic setup featuring our signature artificial roses — creating a stunning and intimate atmosphere for your special occasion.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 pt-3 border-t border-coastal-navy/10">
+                  <p className="text-xs text-coastal-charcoal/70 italic flex items-start gap-1">
+                    <Flower2 size={12} className="text-coastal-navy mt-0.5 flex-shrink-0" />
+                    Fresh florals in engagement photos provided by Bloom With Us and available as an optional add-on from $550.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

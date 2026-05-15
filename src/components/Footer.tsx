@@ -19,9 +19,8 @@ export default function Footer() {
             </p>
             <div className="text-coastal-charcoal text-sm font-medium space-y-1">
               <p><strong className="font-medium text-coastal-navy">The Picnic Project Newcastle</strong></p>
-              <p>Servicing Newcastle City, Merewether, Bar Beach & Hunter Valley</p>
+              <p>Servicing the Newcastle area &amp; surrounds</p>
               <p>Newcastle, NSW 2300, Australia</p>
-              <p>Ph: <a href="tel:1300000000" className="hover:text-coastal-blue transition-colors">1300 000 000</a></p>
             </div>
           </div>
           
@@ -29,7 +28,8 @@ export default function Footer() {
             <h4 className="font-bold text-coastal-navy mb-6 uppercase text-xs tracking-widest">Connect</h4>
             <ul className="space-y-4 text-coastal-charcoal font-medium">
               <li><a href="https://www.instagram.com/thepicnicproject.newcastle/" target="_blank" rel="noopener noreferrer" className="hover:text-coastal-blue transition-colors">Instagram</a></li>
-              <li><a href="mailto:hello@thepicnicproject.au" className="hover:text-coastal-blue transition-colors">Email Us</a></li>
+              <li><a href="https://www.facebook.com/people/The-Picnic-Project/61583017870519/" target="_blank" rel="noopener noreferrer" className="hover:text-coastal-blue transition-colors">Facebook</a></li>
+              <li><a href="tel:0422666211" className="hover:text-coastal-blue transition-colors">0422 666 211</a></li>
             </ul>
           </div>
 

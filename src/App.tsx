@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
 import TC from './pages/TC';
+import PricingPage from './pages/PricingPage';
+import FAQPage from './pages/FAQPage';
 import { AnimatePresence } from 'motion/react';
 import { StyleProvider } from './context/StyleContext';
 import { HelmetProvider } from 'react-helmet-async';
@@ -45,6 +47,8 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/book" element={<Booking />} />
               <Route path="/tcs" element={<TC />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/faq" element={<FAQPage />} />
             </Routes>
           </AnimatePresence>
         </main>

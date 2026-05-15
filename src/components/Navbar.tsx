@@ -6,22 +6,29 @@ import { cn } from '@/src/lib/utils';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const [scrolled, setScrolled] = useState(!isHomePage);
 
+  // On non-home pages (no hero), always show the solid navbar
   useEffect(() => {
+    if (!isHomePage) {
+      setScrolled(true);
+      return;
+    }
+    setScrolled(window.scrollY > 50);
     const handleScroll = () => {
-      const threshold = 50;
-      setScrolled(window.scrollY > threshold);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Pricing', path: '/#pricing' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'Style Guide', path: '/#style-guide' },
+    { name: 'FAQ', path: '/faq' },
     { name: 'T&Cs', path: '/tcs' },
   ];
 

@@ -3,9 +3,9 @@ import { Users, Heart, Sparkles } from 'lucide-react';
 
 export default function SocialImpact() {
   const stats = [
-    { icon: Users, label: 'Inclusive Employment', value: '100%', detail: 'Championing diverse abilities' },
-    { icon: Heart, label: 'Community Support', value: 'Local', detail: 'Hunter Region focus' },
-    { icon: Sparkles, label: 'Bespoke Experience', value: 'Premium', detail: 'Curated with care' },
+    { icon: Users, label: 'Inclusive Employment', value: '100%', detail: 'Staff paid at full award wage' },
+    { icon: Heart, label: 'Community Support', value: 'Local', detail: 'Newcastle, NSW · Support small business' },
+    { icon: Sparkles, label: 'Bespoke Picnic Experience', value: 'Luxury', detail: 'Stylish and comfortable' },
   ];
 
   return (
@@ -30,12 +30,9 @@ export default function SocialImpact() {
               <p>
                 The Picnic Project is proudly run by a small team of two - Tay, the founder, and Ella, our beautiful first employee. When you book with us, you’re not only supporting a small local business, you’re also supporting inclusive employment. 
               </p>
-              <p>
-                As The Picnic Project grows, we hope to continue expanding our team and creating more meaningful employment opportunities for people with disability across the Newcastle region.
-              </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+            <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col bg-white shadow-md p-6 rounded-3xl border border-coastal-blue/10 hover:-translate-y-1 transition-transform">
                   <stat.icon className="text-coastal-navy mb-4" size={32} />
@@ -57,7 +54,7 @@ export default function SocialImpact() {
               <img
                 src="/images/ella-tay.jpg"
                 alt="Friends celebrating with a luxury picnic setup in Newcastle, NSW"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover will-change-transform [transform:translateZ(0)] [image-rendering:-webkit-optimize-contrast]"
                 loading="lazy"
               />
             </div>
