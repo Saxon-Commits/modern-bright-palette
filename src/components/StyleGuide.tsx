@@ -40,7 +40,7 @@ export default function StyleGuide() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % styles.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -134,19 +134,18 @@ export default function StyleGuide() {
                 className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
                   i === index
                     ? 'ring-4 ring-white shadow-2xl scale-[1.02]'
-                    : 'opacity-60 hover:opacity-90 hover:scale-[1.01]'
+                    : 'opacity-75 hover:opacity-95 hover:scale-[1.01]'
                 }`}
               >
                 <div className="aspect-[4/3] lg:aspect-[16/9]">
                   <img
-                    src={style.image}
+                    src={style.images[0]}
                     alt={`${style.title} picnic style`}
                     className="w-full h-full object-cover"
-                    loading="lazy"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-3 lg:p-4">
-                  <span className="text-[10px] lg:text-xs uppercase tracking-widest text-white/60 font-bold">{style.tag}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-3 lg:p-4">
+                  <span className="text-[10px] lg:text-xs uppercase tracking-widest text-white/80 font-bold">{style.tag}</span>
                   <span className="text-sm lg:text-base font-display italic text-white leading-tight">{style.title}</span>
                 </div>
                 {i === index && (
