@@ -66,7 +66,7 @@ export default function Hero() {
             <span className="italic font-normal text-coastal-blue [text-shadow:0_2px_12px_rgba(0,0,0,0.9),0_0_30px_rgba(0,0,0,0.6)]">supporting inclusion.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/95 mb-10 max-w-3xl mx-auto font-medium tracking-wide [text-shadow:0_2px_8px_rgba(0,0,0,0.4)]">
-            Bespoke picnics for hens, birthdays &amp; proposals — Newcastle &amp; surrounds
+            Indulge in a stylish, comfortable picnic experience while supporting a small Newcastle business creating meaningful opportunities for people living with disability
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://form.jotform.com/260421379292054?fbclid=PAVERFWAQ35-hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLcaOhSDvO_hu47amDfIi2_ly7hRzFeYx91n3gaQMAhERb5minO-Ja15XARw_aem_dIzyDJkY6rzVQe4JUF4ANw" target="_blank" rel="noopener noreferrer" className="coastal-button pl-10 pr-8 py-4 text-lg flex items-center gap-6 group shadow-2xl">

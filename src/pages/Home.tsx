@@ -16,7 +16,7 @@ export default function Home() {
     >
       <SEO 
         title="Luxury Picnic Newcastle | Hens Parties, Proposals & Birthdays"
-        description="Bespoke luxury picnic setups in Newcastle, NSW. Perfect for hens parties, proposals, birthdays, and baby showers. A 100% inclusive small business."
+        description="Book a bespoke luxury picnic setup in Newcastle, NSW. Perfect for hens parties, proposals, & birthdays. 100% inclusive—let us style your perfect day!"
         canonical="/"
         schema={homeSchema}
       />

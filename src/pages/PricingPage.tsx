@@ -30,8 +30,8 @@ export default function PricingPage() {
       exit={{ opacity: 0 }}
     >
       <SEO
-        title="Luxury Picnic Pricing Newcastle | The Picnic Project"
-        description="Transparent pricing for luxury picnic setups in Newcastle & surrounds. Packages from $250 for hens parties, birthdays, proposals & baby showers. Everything included."
+        title="Luxury Picnic Pricing & Packages Newcastle | The Picnic Project"
+        description="Explore premium luxury picnic packages in Newcastle from $250! Find full inclusions, optional extras, engagement setups & local partners. Book yours today!"
         canonical="/pricing"
         schema={pricingSchema}
       />

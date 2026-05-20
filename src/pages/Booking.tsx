@@ -47,8 +47,8 @@ export default function Booking() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-white">
       <SEO 
-        title="Book Your Luxury Picnic in Newcastle NSW | The Picnic Project"
-        description="Book a bespoke luxury picnic setup for your next birthday, hens party, or proposal in Newcastle, NSW. Fill out the form to check availability."
+        title="Book a Luxury Picnic Setup in Newcastle | The Picnic Project"
+        description="Ready to host a luxury picnic in Newcastle? Book your gorgeous custom setup for hens parties, proposals, birthdays, and anniversaries. Lock in your date now!"
         canonical="/book"
         schema={breadcrumbSchema}
       />

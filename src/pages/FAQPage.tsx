@@ -13,8 +13,8 @@ export default function FAQPage() {
       exit={{ opacity: 0 }}
     >
       <SEO
-        title="FAQs | The Picnic Project Newcastle"
-        description="Answers to your most common questions about our luxury picnic setups in Newcastle — food, weather, locations, group sizes, kids, pets and more."
+        title="Luxury Picnic FAQs Newcastle | Answers to Common Questions"
+        description="Got questions about luxury picnic setups in Newcastle? Find answers about catering, locations, wet weather, custom styling, kids, pets and bookings here!"
         canonical="/faq"
         schema={faqSchema}
       />

@@ -5,8 +5,8 @@ export default function TC() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-coastal-sand">
       <SEO 
-        title="Terms & Conditions | The Picnic Project Newcastle"
-        description="Read the terms and conditions for booking a luxury picnic with The Picnic Project in Newcastle, NSW. Information on cancellations, weather, and payments."
+        title="Terms & Conditions | Luxury Picnic Hire Newcastle"
+        description="Read the terms & conditions for luxury picnic setups in Newcastle by The Picnic Project. Details on our wet weather policy, cancellations, and deposits."
         canonical="/tcs"
       />
       <div className="max-w-4xl mx-auto bg-white rounded-[2rem] p-8 md:p-16 shadow-sm border border-gray-100">
