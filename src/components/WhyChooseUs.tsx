@@ -11,12 +11,12 @@ export default function WhyChooseUs() {
     {
       icon: Heart,
       title: "100% Inclusive Employment",
-      desc: "We are a proudly inclusive small business. Our team is dedicated to championing diverse abilities, meaning every booking helps create meaningful employment."
+      desc: "We are a proudly inclusive small business. Every booking directly supports meaningful employment opportunities"
     },
     {
       icon: Sparkles,
       title: "Premium Bespoke Experience",
-      desc: "No two picnics are identical. From a romantic proposal for two to an 18th birthday or a massive hens party, our setups are luxurious, elevated, and tailored to you."
+      desc: "No two picnics feel the same! From a romantic proposal for two to an 18th birthday or a classy hens party, our setups are luxurious, elevated, and tailored to you."
     }
   ];
 

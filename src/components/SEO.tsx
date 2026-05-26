@@ -13,7 +13,7 @@ export default function SEO({
   title,
   description,
   canonical,
-  ogImage = 'https://thepicnicproject.au/images/style-pic-1.jpg',
+  ogImage = 'https://thepicnicproject.au/images/style-pic-1.webp',
   type = 'website',
   schema,
 }: SEOProps) {

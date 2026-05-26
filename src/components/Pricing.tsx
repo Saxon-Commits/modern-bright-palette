@@ -116,7 +116,7 @@ export default function Pricing() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="aspect-[4/3] md:aspect-auto">
                 <img
-                  src="/images/engagement-package.jpg"
+                  src="/images/engagement-package.webp"
                   alt="The Engagement Package — luxury picnic setup with signature artificial roses"
                   className="w-full h-full object-cover"
                   loading="lazy"

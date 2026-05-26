@@ -3,7 +3,7 @@ export const homeSchema = [
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "The Picnic Project Newcastle",
-    "image": "https://thepicnicproject.au/images/style-pic-1.jpg",
+    "image": "https://thepicnicproject.au/images/style-pic-1.webp",
     "description": "Luxury picnic setups for birthdays, hens parties, baby showers, gender reveals, anniversaries, proposals, engagements, group events, and social gatherings in Newcastle, NSW.",
     "url": "https://thepicnicproject.au",
     "telephone": "+61422666211",

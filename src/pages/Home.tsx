@@ -2,6 +2,7 @@ import Hero from '@/src/components/Hero';
 import SocialImpact from '@/src/components/SocialImpact';
 import StyleGuide from '@/src/components/StyleGuide';
 import WhyChooseUs from '@/src/components/WhyChooseUs';
+import InstagramFeed from '@/src/components/InstagramFeed';
 import Location from '@/src/components/Location';
 import { motion } from 'motion/react';
 import SEO from '@/src/components/SEO';
@@ -26,7 +27,7 @@ export default function Home() {
       {/* Editorial strip — Ella at work */}
       <div className="relative h-[420px] md:h-[520px] overflow-hidden">
         <img
-          src="/images/hero-ella.jpg"
+          src="/images/hero-ella.webp"
           alt="Ella from The Picnic Project carefully setting up a luxury picnic in Newcastle"
           className="w-full h-full object-cover object-[center_55%]"
           loading="lazy"
@@ -41,6 +42,7 @@ export default function Home() {
 
       <StyleGuide />
       <WhyChooseUs />
+      <InstagramFeed />
       <Location />
     </motion.div>
   );

@@ -52,7 +52,7 @@ export default function SocialImpact() {
           >
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white relative z-10">
               <img
-                src="/images/ella-tay.jpg"
+                src="/images/ella-tay.webp"
                 alt="Friends celebrating with a luxury picnic setup in Newcastle, NSW"
                 className="w-full h-full object-cover will-change-transform [transform:translateZ(0)] [image-rendering:-webkit-optimize-contrast]"
                 loading="lazy"

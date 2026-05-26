@@ -4,19 +4,19 @@ import { useState, useEffect } from 'react';
 
 const heroImages = [
   {
-    src: '/images/hero-picnic-setup-new.jpg',
+    src: '/images/hero-picnic-setup-new.webp',
     alt: 'Luxury beach picnic setup for a hens party or proposal at Merewether Beach, Newcastle',
   },
   {
-    src: '/images/hero-2.jpg',
+    src: '/images/hero-2.webp',
     alt: 'Elegant neutral-toned luxury picnic setup with white florals and candles, Newcastle',
   },
   {
-    src: '/images/hero-3.jpg',
+    src: '/images/hero-3.webp',
     alt: 'Stunning blue floral luxury picnic table setting, Newcastle picnic experience',
   },
   {
-    src: '/images/hero-4.jpg',
+    src: '/images/hero-4.webp',
     alt: 'Romantic outdoor picnic with pink florals and umbrella, Newcastle and Hunter Valley',
   },
 ];
