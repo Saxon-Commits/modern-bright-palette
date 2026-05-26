@@ -5,7 +5,7 @@ import { useStyleColor } from '../context/StyleContext';
 const styles = [
   {
     title: 'The "Blue"',
-    images: ['/images/style-pic-2.webp', '/images/hero-3.webp'],
+    images: ['/images/style-guide-blue-main.webp', '/images/style-guide-blue-closeup.webp'],
     description: 'Bold blue florals with gorgeous statement glassware. Perfect for a coastal hens party, oceanside proposal, or anyone who loves a dramatic, jewel-toned palette that really pops in photos.',
     color: '#6094d0',
     tag: 'Statement & Coastal',
@@ -13,7 +13,7 @@ const styles = [
   },
   {
     title: 'The "Neutral"',
-    images: ['/images/style-pic-1.webp', '/images/hero-2.webp'],
+    images: ['/images/style-guide-neutral-main.webp', '/images/style-guide-neutral-closeup.webp'],
     description: 'Timeless, underrated, elegant. Warm linen tones, white florals and soft textures — the kind of setup that photographs beautifully in any light and suits any location.',
     color: '#d4a373',
     tag: 'Timeless & Elegant',
@@ -21,7 +21,7 @@ const styles = [
   },
   {
     title: 'The "Red & Pink"',
-    images: ['/images/style-pic-3.webp', '/images/red style guide close up image.webp'],
+    images: ['/images/style-guide-red-pink-main.webp', '/images/style-guide-red-pink-closeup.webp'],
     description: 'Our favourite! Playful, vibrant and a little fun. Bright blooms, rich reds and pops of pink — ideal for hens parties, milestone birthdays, and anyone who wants their picnic to feel like a celebration.',
     color: '#D83D50',
     tag: 'Playful & Vibrant',
