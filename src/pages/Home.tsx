@@ -25,16 +25,24 @@ export default function Home() {
       <SocialImpact />
 
       {/* Editorial strip — Ella at work */}
-      <div className="relative h-[420px] md:h-[520px] overflow-hidden">
+      <div className="relative h-[65vh] md:h-[85vh] overflow-hidden flex flex-col md:flex-row items-center justify-center bg-stone-900">
+        {/* Blurred Background (Desktop Only) */}
+        <div 
+          className="hidden md:block absolute inset-0 bg-cover bg-center blur-xl scale-110 opacity-50"
+          style={{ backgroundImage: `url('/images/hero-ella.webp')` }}
+        />
+        
+        {/* Image: Fills background on mobile, floating rounded box on desktop */}
         <img
           src="/images/hero-ella.webp"
           alt="Ella from The Picnic Project carefully setting up a luxury picnic in Newcastle"
-          className="w-full h-full object-cover object-[center_55%]"
+          className="absolute md:relative inset-0 md:inset-auto z-10 w-full md:w-auto h-full md:h-[calc(100%-4rem)] object-cover md:rounded-[2rem] md:shadow-2xl"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20" />
-        <div className="absolute inset-0 flex items-center px-8 md:px-16">
-          <p className="font-handwriting text-3xl md:text-5xl text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] transform -rotate-2">
+
+        {/* Text Overlay */}
+        <div className="absolute inset-0 flex items-start pt-24 md:pt-0 justify-center md:items-center md:justify-start px-8 md:px-24 z-20 pointer-events-none w-full bg-gradient-to-b from-black/60 via-black/10 to-transparent md:bg-none">
+          <p className="font-handwriting text-5xl md:text-6xl text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)] transform -rotate-2 text-center md:text-left">
             every detail, with love
           </p>
         </div>
