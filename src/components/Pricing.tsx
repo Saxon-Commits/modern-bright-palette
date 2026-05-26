@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
-import { Check, Flower2, Star } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Check, Flower2, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const pricingData = [
   { group: 'Up to 4 people', price: '$250' },
@@ -34,7 +35,23 @@ const extras = [
   { name: 'Ice for bucket', price: '$5' },
 ];
 
+const engagementImages = [
+  { src: '/images/engagement-package.webp', position: 'object-center' },
+  { src: '/images/engagement-carousel-1.webp', position: 'object-center' },
+  { src: '/images/engagement-carousel-2.webp', position: 'object-center' }
+];
+
 export default function Pricing() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev === engagementImages.length - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -58,10 +75,10 @@ export default function Pricing() {
                     <span className="text-2xl font-bold text-coastal-navy">{item.price}</span>
                   </div>
                 ))}
-                <a 
-                  href="https://form.jotform.com/260421379292054?fbclid=PAVERFWAQ35-hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLcaOhSDvO_hu47amDfIi2_ly7hRzFeYx91n3gaQMAhERb5minO-Ja15XARw_aem_dIzyDJkY6rzVQe4JUF4ANw" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://form.jotform.com/260421379292054?fbclid=PAVERFWAQ35-hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLcaOhSDvO_hu47amDfIi2_ly7hRzFeYx91n3gaQMAhERb5minO-Ja15XARw_aem_dIzyDJkY6rzVQe4JUF4ANw"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="md:col-span-2 flex items-center justify-between p-6 bg-coastal-navy text-white rounded-2xl shadow-md cursor-pointer hover:bg-coastal-blue hover:text-coastal-navy transition-all"
                 >
                   <span className="font-bold text-lg">17-20 people</span>
@@ -114,13 +131,48 @@ export default function Pricing() {
         <div className="mt-12">
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-coastal-blue/10">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="aspect-[4/3] md:aspect-auto">
-                <img
-                  src="/images/engagement-package.webp"
-                  alt="The Engagement Package — luxury picnic setup with signature artificial roses"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+              <div className="relative aspect-[4/3] md:aspect-auto md:h-full bg-stone-100 group overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentImageIndex}
+                    src={engagementImages[currentImageIndex].src}
+                    alt={`The Engagement Package — luxury picnic setup showcase ${currentImageIndex + 1}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className={`absolute inset-0 w-full h-full object-cover ${engagementImages[currentImageIndex].position}`}
+                    loading="lazy"
+                  />
+                </AnimatePresence>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={() => setCurrentImageIndex((prev) => (prev === 0 ? engagementImages.length - 1 : prev - 1))}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/80 flex items-center justify-center text-coastal-navy opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white z-10"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={() => setCurrentImageIndex((prev) => (prev === engagementImages.length - 1 ? 0 : prev + 1))}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/80 flex items-center justify-center text-coastal-navy opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white z-10"
+                  aria-label="Next image"
+                >
+                  <ChevronRight size={20} />
+                </button>
+
+                {/* Dots */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                  {engagementImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      className={`h-2 rounded-full transition-all ${currentImageIndex === idx ? 'bg-white w-6' : 'bg-white/50 w-2'}`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
               <div className="bg-gradient-to-br from-coastal-sand to-coastal-blue/10 p-10 md:p-14 flex flex-col justify-center">
                 <div className="flex items-center gap-2 mb-4">
@@ -149,7 +201,7 @@ export default function Pricing() {
             <h3 className="text-3xl text-coastal-navy italic">Trusted Partnerships & Creative Add-ons</h3>
             <p className="text-coastal-charcoal mt-2 font-medium">Elevate your picnic with our hand-picked local creatives. Available to add to any package.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all border border-coastal-blue/10">
               <h4 className="text-xl font-bold text-coastal-navy mb-2">Bloom With Us Florals</h4>
