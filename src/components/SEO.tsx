@@ -13,11 +13,11 @@ export default function SEO({
   title,
   description,
   canonical,
-  ogImage = 'https://thepicnicproject.au/images/style-pic-1.webp',
+  ogImage = 'https://thepicnicproject.com.au/images/style-pic-1.webp',
   type = 'website',
   schema,
 }: SEOProps) {
-  const siteUrl = 'https://thepicnicproject.au';
+  const siteUrl = 'https://thepicnicproject.com.au';
   const url = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (
