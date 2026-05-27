@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thepicnicproject.au/sitemap.xml
+Sitemap: https://thepicnicproject.com.au/sitemap.xml
