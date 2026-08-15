@@ -15,6 +15,7 @@ import FAQPage from './pages/FAQPage';
 import { AnimatePresence } from 'motion/react';
 import { StyleProvider } from './context/StyleContext';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -53,6 +54,7 @@ export default function App() {
           </AnimatePresence>
         </main>
         <Footer />
+        <Analytics />
       </div>
       </Router>
     </StyleProvider>
